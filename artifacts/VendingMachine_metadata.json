@@ -1,0 +1,64 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "caller",
+						"type": "address"
+					}
+				],
+				"name": "Unauthorized",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"new_feature. sol8_customError.sol": "VendingMachine"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"new_feature. sol8_customError.sol": {
+			"keccak256": "0xd1e248cef40cef4c30f3c04a6caa8e3a4fc4aa925f5912378bbcdec0367cd8fa",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://30e0121ad45ad9a6ee48f9889f15f50ec875a7adf8a142ecfbf1b52b552d8c29",
+				"dweb:/ipfs/QmQQ7QgwZrSAY1t2mcnqdoXT1UmHPhxWhUhByrq21zjqoW"
+			]
+		}
+	},
+	"version": 1
+}

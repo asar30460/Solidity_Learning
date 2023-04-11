@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.18+commit.87f61d96"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "testUncheckedUnderflow",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testUnderflow",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"00. solidity_whatnew.sol": "Safemath"
+		},
+		"evmVersion": "paris",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"00. solidity_whatnew.sol": {
+			"keccak256": "0x8a8a12d7ec623c64abf9a712e5347f2ca1460ce21bff55db9988e7a1804348fa",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://13763ba7bdf7214ec041921f4bce9225c1e7bb045bc56096613cc08d21360084",
+				"dweb:/ipfs/QmQ7UjT7k1bJ3diJqtThCVPyNSmTMLFSiAdvU9fWsUJV9v"
+			]
+		}
+	},
+	"version": 1
+}
