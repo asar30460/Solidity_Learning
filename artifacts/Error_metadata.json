@@ -9,44 +9,17 @@
 				"inputs": [
 					{
 						"internalType": "address",
-						"name": "owner",
+						"name": "_owner",
 						"type": "address"
 					},
 					{
 						"internalType": "address",
-						"name": "caller",
+						"name": "_caller",
 						"type": "address"
 					}
 				],
 				"name": "Unauthorized",
 				"type": "error"
-			},
-			{
-				"inputs": [],
-				"name": "alterVar",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "num",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "testAssert",
-				"outputs": [],
-				"stateMutability": "view",
-				"type": "function"
 			},
 			{
 				"inputs": [
@@ -110,11 +83,11 @@
 	},
 	"sources": {
 		"03. Error.sol": {
-			"keccak256": "0x2caff4cafe79fb7887bd13b1eecb89db9fa7619a79f7e008dfc5d39bed4787f1",
+			"keccak256": "0x0c4e62e5e3ea41bb98dda8076df50431d74ebaae5da7cded05f90bec7bb19caf",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6a2ee9e4672cab9d0066cea6acae134834bc872ee5989fd84f38ecc7b1ff5ecd",
-				"dweb:/ipfs/QmS9RfmAe1dGFfKynPfKXmJxnsdaWme3izbNm92FrsTjVX"
+				"bzz-raw://bd2dca7181b239038c3c6f3ed82979beb65fbcb622af224efe7f27c382d72255",
+				"dweb:/ipfs/QmT2MzgXZVJNgTLffrfBkLgbwL65ZNDi2DNVd4AGE34zFb"
 			]
 		}
 	},

@@ -27,7 +27,27 @@
 			},
 			{
 				"inputs": [],
+				"name": "foo",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "inc",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_x",
+						"type": "uint256"
+					}
+				],
+				"name": "incBy",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -87,11 +107,11 @@
 	},
 	"sources": {
 		"04. Function Modifiers.sol": {
-			"keccak256": "0x77af326836ea962eb4511b22a42b4d1972d7e62bdb9cfa212ed650d2d01ffb7b",
+			"keccak256": "0x2e77cac071e6cdbad2e500c7899dec2d693f2669bdab3b6c29e6ab37e56c3ade",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://316fed62beb732ff0f244d0dfed792cf88cd6dc4b86003d508601f1f3c9295f7",
-				"dweb:/ipfs/QmYyZ3iDwdNovh7oCq39JN5VwddzRpGYmeZecNaD9GxEan"
+				"bzz-raw://3a6401f3ac5b795c79d985e7886fc2427cebddca95d8a63abed5449db66ef808",
+				"dweb:/ipfs/QmSWzmBZ12WraZ1HHfJvkVBAmP6FCVSXXZwGTHC85vErGA"
 			]
 		}
 	},
