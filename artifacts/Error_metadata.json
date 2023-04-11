@@ -8,18 +8,51 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
-						"name": "_owner",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "balance",
+						"type": "uint256"
 					},
 					{
-						"internalType": "address",
-						"name": "_caller",
-						"type": "address"
+						"internalType": "uint256",
+						"name": "withdrawAmount",
+						"type": "uint256"
 					}
 				],
-				"name": "Unauthorized",
+				"name": "InsufficientBalance",
 				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "num",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testAssert",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_withdrawAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "testCustomError",
+				"outputs": [],
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [
@@ -45,13 +78,6 @@
 				"name": "testRevert",
 				"outputs": [],
 				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "withdraw",
-				"outputs": [],
-				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -83,11 +109,11 @@
 	},
 	"sources": {
 		"03. Error.sol": {
-			"keccak256": "0x0c4e62e5e3ea41bb98dda8076df50431d74ebaae5da7cded05f90bec7bb19caf",
+			"keccak256": "0x3e2ec1d451ef2c956ef6c317b32cd1ec4b68318251c857562e25d368e383e105",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bd2dca7181b239038c3c6f3ed82979beb65fbcb622af224efe7f27c382d72255",
-				"dweb:/ipfs/QmT2MzgXZVJNgTLffrfBkLgbwL65ZNDi2DNVd4AGE34zFb"
+				"bzz-raw://618655c836848b19a7d2a551d21c647eb5f011fbae4dc8c974b9e6b5d52724f8",
+				"dweb:/ipfs/QmXmHMeZqPHfaGPKpTkj2nJZMcKZq2e2nd2CNfYyXWuLae"
 			]
 		}
 	},
