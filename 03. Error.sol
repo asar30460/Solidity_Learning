@@ -17,7 +17,7 @@ contract Error {
             revert("Input must be greater than 10");
         }
     }
-
+    
     uint public num;
 
     function testAssert() public view {
