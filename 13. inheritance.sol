@@ -1,45 +1,50 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
-contract A {
+contract building {
+    event Log(string message);
+
+    string public name;
+    string public location = 'undefined';
+
+    constructor(string memory _name) {
+        name = _name;
+    }
+
     // "virtual' to tell Solidity that this func can be inherited and customized by the other contract.
-    function foo() public pure virtual returns(string memory){
-        return 'A';
+    function set_location(string memory _location) public {
+        location = _location;
     }
 
-    function bar() public pure virtual returns(string memory){
-        return 'A';
-    }
-
-    // more code here.
-    function baz() public pure returns(string memory){
-        return 'A';
-    }
-}
-
-contract B is A {
-    // "override' means that this func can be customized.
-    function foo() public pure override returns(string memory){
-        return 'B';
-    }
-
-    function bar() public pure virtual override returns(string memory){
-        return 'B';
+    function get_location() public virtual returns(string memory){
+        return location;
     }
 
     // more code here.
+    function Owner() public pure returns(string memory){
+        return 'AI';
+    }
 }
 
-contract C is B {
+contract Google is building('Taipei 1st headquarter') {
+    string private area;
+    function get_name() public view returns(string memory) {
+        return name;
+    }
+    
+    function set_area(string memory _area) public {
+        area = _area;
+    }
+
     // "override' means that this func can be customized.
-    function bar() public pure virtual override returns(string memory) {
-        return 'C';
+    function get_location() public virtual override returns(string memory){
+        emit Log('Func. \'Google.get_location\' called.');
+        return(string.concat(location, area));
     }
 
-    function qux() public pure virtual returns(string memory) {
-        return 'C';
-    }
+    // more code here.
 }
+
 
 /* 
 // Contracts can inherit from multiple parent contracts.
@@ -48,15 +53,15 @@ contract C is B {
 // right to left, and in depth-first manner.
 */
 
-// B is more priorior than C, so, put B first, and then C.
-contract D is B, C {
-    // D.bar() returns "C"
-    // since C is the right most parent contract with function foo()
-    function bar() public pure override(B, C) returns(string memory){
-        return super.bar();
+// building is more priorior than Google, so, put building first, and then Google.
+contract user is building, Google {
+    string private section;
+
+    function set_section(string memory _section) public {
+        section = _section;
     }
 
-    function qux() public pure override(C) returns(string memory) {
-        return 'D';
+    function get_location() public override(building, Google) returns(string memory){
+        return (string.concat(super.get_location(), section));
     }
 }

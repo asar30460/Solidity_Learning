@@ -6,19 +6,8 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "constructor"
-			},
-			{
 				"inputs": [],
-				"name": "bar",
+				"name": "externalFunc",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -31,7 +20,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "baz",
+				"name": "publicFunc",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -44,7 +33,33 @@
 			},
 			{
 				"inputs": [],
-				"name": "foo",
+				"name": "publicVar",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testInternalFunc",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testPublicFunc",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -69,7 +84,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"13. inheritance.sol": "A"
+			"14. Visibility.sol": "Child"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -83,12 +98,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"13. inheritance.sol": {
-			"keccak256": "0x919494ba490691ac7d2fb431cb661aac4468eab778ebf66ee743026b7184a260",
+		"14. Visibility.sol": {
+			"keccak256": "0x0b569918a1786fc35ebd87e914ff6042c98bfb9eb01f2c41be88e22434fa207c",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f9bbd0f64632a4bd21735bf09719262c1a81c6305539aa88c3c95979ae4567b9",
-				"dweb:/ipfs/QmZwWUia7fMbQGJUNcBGJrXYCqnCGVZokt8EGe2X7d2gsV"
+				"bzz-raw://22b33600352a5b55940bc67f71e0d684921749dda6d7fc73049f54671c2dfede",
+				"dweb:/ipfs/QmbvkW5zLsCcmhS4U6XV5JELBxSfskdzQqLarN4hMAMuQG"
 			]
 		}
 	},

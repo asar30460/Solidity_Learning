@@ -8,9 +8,9 @@
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_name",
-						"type": "string"
+						"internalType": "uint256",
+						"name": "_myUint",
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -18,41 +18,28 @@
 			},
 			{
 				"inputs": [],
-				"name": "bar",
+				"name": "MY_ADDRESS",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "address",
 						"name": "",
-						"type": "string"
+						"type": "address"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "baz",
+				"name": "MY_UINT",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "foo",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -69,7 +56,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"13. inheritance.sol": "A"
+			"15. immutable.sol": "Immutable"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -83,12 +70,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"13. inheritance.sol": {
-			"keccak256": "0x919494ba490691ac7d2fb431cb661aac4468eab778ebf66ee743026b7184a260",
+		"15. immutable.sol": {
+			"keccak256": "0x5124e266af3e96c2849ae2d569d028f66c3d061e7c4f6377fa10976b0fe750cb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f9bbd0f64632a4bd21735bf09719262c1a81c6305539aa88c3c95979ae4567b9",
-				"dweb:/ipfs/QmZwWUia7fMbQGJUNcBGJrXYCqnCGVZokt8EGe2X7d2gsV"
+				"bzz-raw://58565c0fda972638e8b7848c8411ed5867d07b7602e15a49b0cf8d0a7e471a6b",
+				"dweb:/ipfs/QmcPjDTkfMz5DQ8ezvcaWYiQcs7LVy3qgtGAhiegRLRpii"
 			]
 		}
 	},

@@ -17,8 +17,21 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "Log",
+				"type": "event"
+			},
+			{
 				"inputs": [],
-				"name": "bar",
+				"name": "Owner",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -31,7 +44,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "baz",
+				"name": "get_location",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -39,12 +52,12 @@
 						"type": "string"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "foo",
+				"name": "location",
 				"outputs": [
 					{
 						"internalType": "string",
@@ -52,7 +65,33 @@
 						"type": "string"
 					}
 				],
-				"stateMutability": "pure",
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "name",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_location",
+						"type": "string"
+					}
+				],
+				"name": "set_location",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -69,7 +108,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"13. inheritance.sol": "A"
+			"13. inheritance.sol": "building"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -84,11 +123,11 @@
 	},
 	"sources": {
 		"13. inheritance.sol": {
-			"keccak256": "0x919494ba490691ac7d2fb431cb661aac4468eab778ebf66ee743026b7184a260",
+			"keccak256": "0xe52eb675db80daaf917a83d58bd749ab888b790ff6d6be5c685f895eff8f727b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://f9bbd0f64632a4bd21735bf09719262c1a81c6305539aa88c3c95979ae4567b9",
-				"dweb:/ipfs/QmZwWUia7fMbQGJUNcBGJrXYCqnCGVZokt8EGe2X7d2gsV"
+				"bzz-raw://252bd9bbe023bf9612c6487ff01512adaded65e441512feaabacd2b89d3933cd",
+				"dweb:/ipfs/QmeToeX6qCygc14eKiNdJFz9s7gPaBEt5vaJq2eUs37SSe"
 			]
 		}
 	},

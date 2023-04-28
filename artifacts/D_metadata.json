@@ -86,11 +86,11 @@
 	},
 	"sources": {
 		"13. inheritance.sol": {
-			"keccak256": "0x0ad3534bcc0198d1059c0ef0932198b2000f876c0e7b2f2315b1ecd2304a621d",
+			"keccak256": "0x919494ba490691ac7d2fb431cb661aac4468eab778ebf66ee743026b7184a260",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://db09c361a32ef4b2db6105665d8d171299996ac2f1292b3f3d935365645b202d",
-				"dweb:/ipfs/QmeTr2c8U7gukCBbDqvy4QXvhQfpz1XcKdG3iKwveJpDGc"
+				"bzz-raw://f9bbd0f64632a4bd21735bf09719262c1a81c6305539aa88c3c95979ae4567b9",
+				"dweb:/ipfs/QmZwWUia7fMbQGJUNcBGJrXYCqnCGVZokt8EGe2X7d2gsV"
 			]
 		}
 	},
