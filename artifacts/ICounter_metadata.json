@@ -39,7 +39,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"19. interface.sol": "Counter"
+			"19. interface.sol": "ICounter"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
