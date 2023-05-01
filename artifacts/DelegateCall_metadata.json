@@ -10,75 +10,67 @@
 				"inputs": [
 					{
 						"indexed": false,
-						"internalType": "address",
-						"name": "caller",
-						"type": "address"
+						"internalType": "bool",
+						"name": "success",
+						"type": "bool"
 					},
 					{
 						"indexed": false,
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					},
-					{
-						"indexed": false,
-						"internalType": "string",
-						"name": "message",
-						"type": "string"
+						"internalType": "bytes",
+						"name": "data",
+						"type": "bytes"
 					}
 				],
-				"name": "Received",
+				"name": "Response",
 				"type": "event"
 			},
 			{
-				"stateMutability": "payable",
-				"type": "fallback"
+				"inputs": [],
+				"name": "num",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "sender",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
 			},
 			{
 				"inputs": [
 					{
-						"internalType": "string",
-						"name": "_message",
-						"type": "string"
+						"internalType": "address",
+						"name": "_test",
+						"type": "address"
 					},
 					{
 						"internalType": "uint256",
-						"name": "_x",
+						"name": "_num",
 						"type": "uint256"
 					}
 				],
-				"name": "foo",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					},
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
+				"name": "setVars",
+				"outputs": [],
 				"stateMutability": "payable",
 				"type": "function"
 			},
 			{
 				"inputs": [],
-				"name": "message",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "x",
+				"name": "value",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -88,10 +80,6 @@
 				],
 				"stateMutability": "view",
 				"type": "function"
-			},
-			{
-				"stateMutability": "payable",
-				"type": "receive"
 			}
 		],
 		"devdoc": {
@@ -107,7 +95,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"20. call.sol": "Receiver"
+			"21. delegate_call.sol": "DelegateCall"
 		},
 		"evmVersion": "paris",
 		"libraries": {},
@@ -121,12 +109,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"20. call.sol": {
-			"keccak256": "0x85de40d334262718ff8d2fdb7c40a90610111206b66d5ed86ce97a0430b86995",
+		"21. delegate_call.sol": {
+			"keccak256": "0x886ba650c1ad15f583725220d029688fa1ae5f0513ac6a07f1a726bb64d243bb",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1e811488ee87738cde7acb06ec253a6b4db07cc4eda73fefb20c3414d5377212",
-				"dweb:/ipfs/QmTt8ThSL4Y7jcmAGz8hJm6GdBBsU8mdn7fwfs5Kq6o8GV"
+				"bzz-raw://aab08928119db19c878ca848e862fd58f0d6e723b6ddae8dc130f5b4b868ee7d",
+				"dweb:/ipfs/QmUPrYAy1VAPRwXXCtz2xmCu1qPfsPpvyRYB4S8LgspcUV"
 			]
 		}
 	},

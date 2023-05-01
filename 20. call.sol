@@ -40,13 +40,13 @@ contract Caller {
     // However, the transaction itself may still be included in a block, even though it failed to execute. 
     // This means that the sender may still have to pay the transaction fee (i.e., gas cost) even if the transaction did not complete successfully.
     */
-    function testCallFoo(address payable _addr) public payable {
+    function testCallFoo(address _addr) public payable {
         // You can send ether and specify a custom gas amount.
         // "abi.encodeWithSignature" encodes the function we're going to call.
-        (bool success, bytes memory data) = _addr.call{value: 1000, gas: 50000}(
+        (bool success, bytes memory data) = _addr.call{value: 1000}(
             abi.encodeWithSignature("foo(string,uint256)", "call foo", 123)
         );
-
+        
         emit Response(success, data);
     }
 
