@@ -74,11 +74,11 @@
 	},
 	"sources": {
 		"17. fallback.sol": {
-			"keccak256": "0xc7bd57b0241eed0bbee2602fb5182a5ce76fa19867b3c076db731427dae0be55",
+			"keccak256": "0xc03add2c1873e0540aef511e8f77f21201b5214695e04c55698cfa9adfbed6e1",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://bba01ceb1969c56b6cb0d51c0335ba85731679f9aa5cf8a9542bef0134edf2ca",
-				"dweb:/ipfs/QmSuh6LUsBxFAWTLgjAmo3nv7PspRTqGPUrNwYn6oBG8Bc"
+				"bzz-raw://b2437cd6b37e450b10aa373f3128c0cfba1f9fea28b969e1c924e72bef86b700",
+				"dweb:/ipfs/QmSmj2nYnNjiTxmwY2vTR687iWALSzX17QYs6cg212UPVH"
 			]
 		}
 	},
