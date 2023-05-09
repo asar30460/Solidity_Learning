@@ -1,11 +1,18 @@
 // SPDX-License-Identifier: MIT
 pragma solidity 0.8.18;
 
-/*
-0. message to sign
-1. hash(message)
-2. sign(hash(message), private key) | offchain
-3. ecrecover(hash(message), signature) == signer
+/* Signature Verification
+
+How to Sign and Verify
+# Signing
+1. Create message to sign
+2. Hash the message
+3. Sign the hash (off chain, keep your private key secret)
+
+# Verify
+1. Recreate hash from the original message
+2. Recover signer from signature and hash
+3. Compare recovered signer to claimed signer
 */
 
 contract VerifySig {
@@ -26,6 +33,7 @@ contract VerifySig {
 
     function recover(bytes32 _ethSignedMessageHash, bytes memory _sig) public pure returns(address) {
         (bytes32 r, bytes32 s, uint8 v) = _split(_sig);
+        // Get the wellet(signed) address
         return ecrecover(_ethSignedMessageHash, v, r, s);
     }
 

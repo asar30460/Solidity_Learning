@@ -125,11 +125,11 @@
 	},
 	"sources": {
 		"25. verify_signature.sol": {
-			"keccak256": "0x9b4851be9a0a7d9b52b74ffc26386a6a077fd6b9e933feca5cc7396f52c119ac",
+			"keccak256": "0xd5e32c3da9fa8f0cee4fee83d7f10edf8c703f435ebeb3df4062a941d6de60dc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://471e1a4363b4a078e6c49ccd6603df484f1e95a9316e1e38fcd079908328b749",
-				"dweb:/ipfs/QmVk5C2ArQ8ku5ATPGsN2wf3fsEdgXJCyWSTdg9aam4Qw6"
+				"bzz-raw://bbe0b62e543afefc5bc8b34ddde916876348304fa5ff1d2fe73e708ae3b47bec",
+				"dweb:/ipfs/QmXosSZ7A8jPNiDWL2VpNtfHo177dfJoH38mCHPEHj8MP7"
 			]
 		}
 	},
