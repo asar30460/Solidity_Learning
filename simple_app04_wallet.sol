@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity ^0.8.18;
 
 contract Wallet {
     address payable public owner;
 
-    constructor(){
+    constructor() {
         owner = payable(msg.sender);
     }
 
@@ -22,7 +22,7 @@ contract Wallet {
         */
     }
 
-    function get_balance() external view returns(uint) {
+    function get_balance() external view returns (uint) {
         return address(this).balance;
     }
 }

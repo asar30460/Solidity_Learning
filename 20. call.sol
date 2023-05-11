@@ -7,7 +7,6 @@ contract Receiver {
 
     event Received(address caller, uint256 amount, string message);
 
-
     fallback() external payable {
         emit Received(msg.sender, msg.value, "Fallback was called");
     }
@@ -16,7 +15,10 @@ contract Receiver {
         emit Received(msg.sender, msg.value, "Receive was called");
     }
 
-    function foo(string memory _message, uint256 _x) public payable returns (bool, uint256) {
+    function foo(
+        string memory _message,
+        uint256 _x
+    ) public payable returns (bool, uint256) {
         emit Received(msg.sender, msg.value, _message);
         message = _message;
         x = _x;
@@ -46,7 +48,7 @@ contract Caller {
         (bool success, bytes memory data) = _addr.call{value: 1000}(
             abi.encodeWithSignature("foo(string,uint256)", "call foo", 123)
         );
-        
+
         emit Response(success, data);
     }
 

@@ -9,21 +9,21 @@ contract FunctionModifier {
         paused = _paused;
     }
 
-    modifier whenNotPaused(){
-        require(!paused, 'Contract Paused.');
-        _;  // This line means run the subsequent code.
+    modifier whenNotPaused() {
+        require(!paused, "Contract Paused.");
+        _; // This line means run the subsequent code.
     }
 
     function inc() external whenNotPaused {
-        count ++;
+        count++;
     }
 
-    function desc() external whenNotPaused{
-        count --;
+    function desc() external whenNotPaused {
+        count--;
     }
 
     modifier restric(uint _x) {
-        require(_x < 100, 'x must less than 100.');
+        require(_x < 100, "x must less than 100.");
         _;
     }
 
@@ -35,8 +35,9 @@ contract FunctionModifier {
     modifier sandwich() {
         count += 10;
         _;
-        count *=2;
+        count *= 2;
     }
+
     // Firstly do count + 10. Then, execute foo function. After end of function, do count * 2;
     function foo() external sandwich {
         count += 1;

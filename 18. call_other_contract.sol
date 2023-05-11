@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity ^0.8.18;
 
 contract CallTestContract {
     // There are 2 ways to call other contract.
@@ -7,20 +7,23 @@ contract CallTestContract {
         // Firstly, initialize the called contract.
         TestContract(_test).setX(_x);
     }
+
     function setX_way2(TestContract _test, uint _x) external {
         _test.setX(_x);
     }
 
-    function getX(TestContract _test) external view returns(uint) {
+    function getX(TestContract _test) external view returns (uint) {
         return _test.getX();
     }
 
     function setXandReceiveEther(TestContract _test, uint _x) external payable {
         // Send Ether to this contract by curly braces.
-        _test.setXandReceiveEther{value: msg.value }(_x);
+        _test.setXandReceiveEther{value: msg.value}(_x);
     }
 
-    function getXandValue(TestContract _test) external view returns(uint _x, uint _value) {
+    function getXandValue(
+        TestContract _test
+    ) external view returns (uint _x, uint _value) {
         (_x, _value) = _test.getXandValue();
     }
 }
@@ -33,7 +36,7 @@ contract TestContract {
         x = _x;
     }
 
-    function getX() external view returns(uint) {
+    function getX() external view returns (uint) {
         return x;
     }
 

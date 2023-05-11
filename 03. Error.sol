@@ -17,7 +17,7 @@ contract Error {
             revert("Input must be greater than 10");
         }
     }
-    
+
     uint public num;
 
     function testAssert() public view {
@@ -35,7 +35,10 @@ contract Error {
     function testCustomError(uint _withdrawAmount) public view {
         uint bal = address(this).balance;
         if (bal < _withdrawAmount) {
-            revert InsufficientBalance({balance: bal, withdrawAmount: _withdrawAmount});
+            revert InsufficientBalance({
+                balance: bal,
+                withdrawAmount: _withdrawAmount
+            });
         }
     }
 }

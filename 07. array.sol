@@ -11,9 +11,8 @@ contract Array {
     // Fixed sized array, all elements initialize to 0
     uint[10] public myFixedSizeArr;
 
-
     function get(uint _i) public view returns (uint) {
-        require(_i < arr2.length, 'Index out of bounds');
+        require(_i < arr2.length, "Index out of bounds");
         return arr2[_i];
     }
 
@@ -55,11 +54,10 @@ contract Array {
 
 contract ArrayRemoveByshifting {
     uint8[] public arr = [1, 2, 3, 4, 5];
-    
+
     // Gas consumption too much
     function remove(uint8 _index) public {
-        for(uint8 i = _index; i < arr.length - 1; i++)
-            arr[i] = arr[i + 1];
+        for (uint8 i = _index; i < arr.length - 1; i++) arr[i] = arr[i + 1];
 
         arr.pop();
     }

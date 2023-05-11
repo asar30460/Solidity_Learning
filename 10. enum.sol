@@ -1,9 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity ^0.8.18;
 
-
-contract Enum{
-    enum Status{
+contract Enum {
+    enum Status {
         None,
         Pending,
         Shipped,
@@ -20,7 +19,7 @@ contract Enum{
     // Accepted - 2
     // Rejected - 3
     // Canceled - 4
-    function get() public view returns(Status) {
+    function get() public view returns (Status) {
         return status;
     }
 

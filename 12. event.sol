@@ -7,7 +7,7 @@ contract Event {
     event IndexedLog(address indexed sender, uint val);
 
     function example() external {
-        emit Log('foo', 1234);
+        emit Log("foo", 1234);
         emit IndexedLog(msg.sender, 789);
     }
 

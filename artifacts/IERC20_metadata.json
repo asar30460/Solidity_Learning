@@ -143,11 +143,11 @@
 	},
 	"sources": {
 		"28. erc20.sol": {
-			"keccak256": "0x96ed567cfd9526fc6f567e355d05f57ce9b18ea95efac36047280126813719ed",
+			"keccak256": "0xe7f4c5f8eda1dd97366b990a1eac004838c3555c9b68061dee97087ce0bca99d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://19596a5310a6cee155e02f461d251811b6a58385951f66e39b3de8c198a499e5",
-				"dweb:/ipfs/QmeRAjquN2UEfhm5bHzQyJwJbwP2h7bNW4v9PfMuZcHigQ"
+				"bzz-raw://924ff0cd63073bd8e4cf1c4bed94c29b02dbd53dd8ecbf15d5b6edc524b69364",
+				"dweb:/ipfs/QmTpaoN8MZBGueVyyffqj1VRnhEnDgGnhRRT9Jw8jd1NXB"
 			]
 		}
 	},

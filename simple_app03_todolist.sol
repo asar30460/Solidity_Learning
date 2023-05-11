@@ -13,7 +13,7 @@ contract TodoList {
         todos.push(Todo({text: _text, completed: false}));
     }
 
-    function updateText(uint8 _index, string calldata _text) external{
+    function updateText(uint8 _index, string calldata _text) external {
         // This way consume more gas since access array each time to update.
         todos[_index].text = _text;
 
@@ -26,7 +26,7 @@ contract TodoList {
 
     function get(uint8 _index) external view returns (string memory, bool) {
         Todo memory todo = todos[_index];
-        return(todo.text, todo.completed);
+        return (todo.text, todo.completed);
     }
 
     function toggleCompleted(uint _index) external {

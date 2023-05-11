@@ -56,7 +56,7 @@ contract Attack {
         selfdestruct(addr);
     }
 
-    function get_balance() external view returns(uint) {
+    function get_balance() external view returns (uint) {
         return address(this).balance;
     }
 }

@@ -10,7 +10,7 @@ contract X {
     }
 }
 
-// Base contract Y 
+// Base contract Y
 contract Y {
     string public text;
 
@@ -22,7 +22,7 @@ contract Y {
 // There are 2 ways to initialize parent contract with parameters.
 
 // Pass the parameters here in the inheritance list.
-contract B is X('Input to X'), Y('Input to Y') {
+contract B is X("Input to X"), Y("Input to Y") {
 
 }
 
@@ -40,7 +40,7 @@ contract C is X, Y {
 // 2. Y
 // 3. D
 contract D is X, Y {
-    constructor() X('X was called') Y('Y was calles') {}
+    constructor() X("X was called") Y("Y was calles") {}
 }
 
 // Order of constructors called:
@@ -48,5 +48,5 @@ contract D is X, Y {
 // 2. Y
 // 3. D
 contract E is X, Y {
-    constructor() Y('Y was called') X('X was calles') {}
+    constructor() Y("Y was called") X("X was calles") {}
 }

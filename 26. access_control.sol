@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity ^0.8.18;
 
 contract AccessControl {
     event GrantRole(bytes32 indexed role, address indexed account);
@@ -21,17 +21,24 @@ contract AccessControl {
         roles[_role][_account] = true;
         emit GrantRole(_role, _account);
     }
-    
+
     modifier only_role(bytes32 _role) {
         require(roles[_role][msg.sender], "Not authorized.");
         _;
     }
-    function grant_role(bytes32 _role, address _account) external only_role(ADMIN) {
+
+    function grant_role(
+        bytes32 _role,
+        address _account
+    ) external only_role(ADMIN) {
         _grant_role(_role, _account);
     }
 
-    function revoke_role(bytes32 _role, address _account) external only_role(ADMIN) {
+    function revoke_role(
+        bytes32 _role,
+        address _account
+    ) external only_role(ADMIN) {
         roles[_role][_account] = false;
-        emit RevokeRole(_role, _account);    
+        emit RevokeRole(_role, _account);
     }
 }

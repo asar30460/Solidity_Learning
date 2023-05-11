@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity ^0.8.18;
 
 contract Counter {
     uint public count;
@@ -13,7 +13,7 @@ contract Counter {
 // And you don't wanna copy paste, you can implement by interface.
 // In this example, we assume "Counter" not in this file.
 interface ICounter {
-    function count() external view returns(uint);
+    function count() external view returns (uint);
 
     function increment() external;
 }
@@ -23,7 +23,7 @@ contract MyContract {
         ICounter(_counter).increment();
     }
 
-    function getCount(address _counter) external view returns(uint) {
+    function getCount(address _counter) external view returns (uint) {
         return ICounter(_counter).count();
     }
 }

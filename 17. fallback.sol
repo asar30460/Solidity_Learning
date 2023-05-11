@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity ^0.8.18;
 
 /*
 fallback() or receive()?
@@ -28,7 +28,7 @@ contract Fallback {
     }
 
     // Receive is a varient of fallback that is triggered when msg.data is empty.
-    receive() external payable{
+    receive() external payable {
         emit Log("receive", gasleft());
     }
 

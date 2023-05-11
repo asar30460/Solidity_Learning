@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity ^0.8.18;
 
-contract TestContract1{
+contract TestContract1 {
     address public owner = msg.sender;
 
     function setOwner(address _owner) public {
-        require(msg.sender == owner, 'not owner');
+        require(msg.sender == owner, "not owner");
         owner = _owner;
     }
 }
@@ -26,7 +26,9 @@ contract Proxy {
     // When the contract deployed, we call event.
     event Deploy(address);
 
-    function deploy(bytes memory _code) external payable returns(address addr) {
+    function deploy(
+        bytes memory _code
+    ) external payable returns (address addr) {
         // Here to decide which contract to deploy.
         assembly {
             // create(v, p, n)
@@ -42,7 +44,7 @@ contract Proxy {
             addr := create(callvalue(), add(_code, 0x20), mload(_code))
         }
         // address(0) means that there was an error creating the contract.
-        require(addr != address(0), 'deploy failed.');
+        require(addr != address(0), "deploy failed.");
 
         emit Deploy(addr);
     }
@@ -54,12 +56,15 @@ contract Hepler {
         return bytecode;
     }
 
-    function getBytecode2(uint _x, uint _y) external pure returns(bytes memory) {
+    function getBytecode2(
+        uint _x,
+        uint _y
+    ) external pure returns (bytes memory) {
         bytes memory bytecode = type(TestContract2).creationCode;
         return abi.encodePacked(bytecode, abi.encode(_x, _y));
     }
 
-    function getCalldata(address _owner) external pure returns(bytes memory) {
-        return abi.encodeWithSignature('setOwner(address)', _owner);
+    function getCalldata(address _owner) external pure returns (bytes memory) {
+        return abi.encodeWithSignature("setOwner(address)", _owner);
     }
 }

@@ -5,7 +5,7 @@ contract building {
     event Log(string message);
 
     string public name;
-    string public location = 'undefined';
+    string public location = "undefined";
 
     constructor(string memory _name) {
         name = _name;
@@ -16,35 +16,35 @@ contract building {
         location = _location;
     }
 
-    function get_location() public virtual returns(string memory){
+    function get_location() public virtual returns (string memory) {
         return location;
     }
 
     // more code here.
-    function Owner() public pure returns(string memory){
-        return 'AI';
+    function Owner() public pure returns (string memory) {
+        return "AI";
     }
 }
 
-contract Google is building('Taipei 1st headquarter') {
+contract Google is building("Taipei 1st headquarter") {
     string private area;
-    function get_name() public view returns(string memory) {
+
+    function get_name() public view returns (string memory) {
         return name;
     }
-    
+
     function set_area(string memory _area) public {
         area = _area;
     }
 
     // "override' means that this func can be customized.
-    function get_location() public virtual override returns(string memory){
-        emit Log('Func. \'Google.get_location\' called.');
-        return(string.concat(location, area));
+    function get_location() public virtual override returns (string memory) {
+        emit Log("Func. 'Google.get_location' called.");
+        return (string.concat(location, area));
     }
 
     // more code here.
 }
-
 
 /* 
 // Contracts can inherit from multiple parent contracts.
@@ -61,7 +61,11 @@ contract user is building, Google {
         section = _section;
     }
 
-    function get_location() public override(building, Google) returns(string memory){
+    function get_location()
+        public
+        override(building, Google)
+        returns (string memory)
+    {
         return (string.concat(super.get_location(), section));
     }
 }
