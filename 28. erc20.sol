@@ -29,8 +29,8 @@ contract ERC20 is IERC20 {
     uint public _totalSupply;
     mapping(address => uint) public _balanceOf;
     mapping(address => mapping(address => uint)) public allowance;
-    string public name = "Test";
-    string public symbol = "TEST";
+    string public name = "MaseLab_test_coin";
+    string public symbol = "MASETC";
     uint8 public decimals = 18;
 
     function totalSupply() external view returns (uint) {

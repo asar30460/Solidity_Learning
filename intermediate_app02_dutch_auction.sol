@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18;
+pragma solidity ^0.8.18;
 
 // Dutch auction: sellers set an initial price of a good
 // Most of buyers may think it is overpriced, so this good go on sale overtime
@@ -15,6 +15,9 @@ interface IERC721 {
 contract DutchAuction {
     uint private constant DURATION = 7 days;
 
+    /* Stroe the address of the NFT, and the NFT id that we're selling
+     * for this auction
+     */
     IERC721 public immutable nft;
     uint public  immutable nftId;
 
