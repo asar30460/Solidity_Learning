@@ -1,3 +1,7 @@
 {
-    "solidity.defaultCompiler": "remote"
+    "solidity.defaultCompiler": "remote",
+    "[solidity]": {
+        "editor.defaultFormatter": "JuanBlanco.solidity"
+    },
+    "editor.defaultFormatter": "RemixProject.ethereum-remix"
 }

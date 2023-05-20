@@ -82,13 +82,14 @@ contract MultiSigWallet is ERC20 {
         emit Deposit(msg.sender, msg.value);
     }
 
-    function submit(
-        address _to,
-        uint _value
-    ) external onlyOwner {
+    function submit(address _to, uint _value) external onlyOwner {
         require(balanceOf(msg.sender) >= _value, "not enough balance");
         transactions.push(
-            Transaction({to: _to, value: (_value * (10 ** decimals())), executed: false})
+            Transaction({
+                to: _to,
+                value: (_value * (10 ** decimals())),
+                executed: false
+            })
         );
         emit Submit(transactions.length - 1);
     }
@@ -130,5 +131,4 @@ contract MultiSigWallet is ERC20 {
         approved[_txId][msg.sender] = false;
         emit Revoke(msg.sender, _txId);
     }
-
 }

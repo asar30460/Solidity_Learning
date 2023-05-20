@@ -2,23 +2,27 @@
 pragma solidity ^0.8.18;
 
 /*
-A calls B, send 100 wei
-        B calls C, send 50 wei
-A ---> B ---> C
-              msg.sender = B
-              msg.value = 50
-              execute code on C's state variables
-              use ETH in C
+ *  A calls B, send 100 wei.
+ *          B calls C, send 50 wei
+ *
+ *  A ---> B ---> C
+ *      msg.sender = B
+ *      msg.value = 50
+ *      execute code on C's state variables
+ *      use ETH in C
+ */       
 
-// DelegateCall is to call the function in other contract to modify own variables.
-A calls B, send 100 wei
-        B delegatecall C
-A ---> B ---> C
-              msg.sender = A
-              msg.value = 100
-              execute code on B's state variables
-              use ETH in B
-*/
+/*
+ *  DelegateCall is to call the function in other contract to modify own variables.
+ *  A calls B, send 100 wei
+ *          B delegatecall C
+ *
+ *  A ---> B ---> C
+ *      msg.sender = A
+ *      msg.value = 100
+ *      execute code on B's state variables
+ *      use ETH in B
+ */
 
 contract TestDelegateCall {
     uint public num;
